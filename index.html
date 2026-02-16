@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IkhtiarSehat - App Platform HealthyEng</title>
+  <style>
+    /* Reset & base */
+    body, h1, h2, p, ul { margin: 0; padding: 0; }
+    body { font-family: Arial, sans-serif; line-height: 1.6; }
+    a { text-decoration: none; color: inherit; }
+
+    /* Layout wrapper */
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+
+    /* Header */
+    header {
+      background: #28a745;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+    }
+    header nav { display: flex; justify-content: center; gap: 20px; }
+    header nav a { font-weight: bold; color: white; }
+
+    /* Hero */
+    .hero {
+      background: #e9f7ef;
+      text-align: center;
+      padding: 60px 20px;
+    }
+    .hero h1 { font-size: 2.8rem; margin-bottom: 20px; }
+    .hero .cta { background: #28a745; color: white; padding: 12px 28px; border-radius: 6px; font-size: 1rem; }
+
+    /* Fitur grid */
+    .features {
+      display: grid;
+      gap: 40px;
+      padding: 40px 0;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+    .feature {
+      background: #f9f9f9;
+      padding: 25px;
+      border-radius: 8px;
+      border: 1px solid #ddd;
+    }
+    .feature h3 { margin-bottom: 10px; color: #28a745; }
+    .feature p { font-size: 0.95rem; }
+
+    /* Footer */
+    footer {
+      background: #343a40;
+      color: #eee;
+      text-align: center;
+      padding: 14px 0;
+      font-size: 0.9rem;
+    }
+
+    /* Responsive tweaks */
+    @media (max-width: 600px) {
+      .hero h1 { font-size: 2.2rem; }
+      header nav { flex-direction: column; gap: 10px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <nav>
+        <a href="#hero">Home</a>
+        <a href="#features">Fitur</a>
+        <a href="#contact">Kontak</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="hero" class="hero container">
+    <h1>Selamat Datang di IkhtiarSehat</h1>
+    <p>Platform Aplikasi untuk Hidup Lebih Sehat dan Aktif 📱🌿</p>
+    <a href="#features" class="cta">Lihat Fitur</a>
+  </section>
+
+  <!-- Features Section -->
+  <section id="features" class="container">
+    <h2 style="text-align:center; color:#28a745; margin-bottom:30px;">Fitur Unggulan</h2>
+    <div class="features">
+
+      <!-- Fitur 1 -->
+      <div class="feature">
+        <h3>Jadwal Kegiatan Sehat</h3>
+        <p>Lihat dan kelola jadwal aktivitas sehat Anda harian.</p>
+      </div>
+
+      <!-- Fitur 2 -->
+      <div class="feature">
+        <h3>Rekomendasi Nutrisi</h3>
+        <p>Dapatkan saran nutrisi berdasarkan kebutuhan tubuh.</p>
+      </div>
+
+      <!-- Fitur 3 -->
+      <div class="feature">
+        <h3>Tracker Kebiasaan</h3>
+        <p>Catat kebiasaan sehat, pantau kemajuan Anda setiap hari.</p>
+      </div>
+
+      <!-- Fitur 4 -->
+      <div class="feature">
+        <h3>Notifikasi & Pengingat</h3>
+        <p>Menerima pengingat harian untuk aktivitas dan asupan.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="contact">
+    <p>© 2026 IkhtiarSehat - App Platform HealthyEng</p>
+    <p>Email: info@ikhtiarsehat.app</p>
+  </footer>
+
+</body>
+</html>
