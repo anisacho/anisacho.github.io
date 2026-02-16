@@ -1,126 +1,246 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>IkhtiarSehat - App Platform HealthyEng</title>
-  <style>
-    /* Reset & base */
-    body, h1, h2, p, ul { margin: 0; padding: 0; }
-    body { font-family: Arial, sans-serif; line-height: 1.6; }
-    a { text-decoration: none; color: inherit; }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IkhtiarSehat | App Platform HealthyEng</title>
 
-    /* Layout wrapper */
-    .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-    /* Header */
-    header {
-      background: #28a745;
-      color: white;
-      padding: 20px 0;
-      text-align: center;
-    }
-    header nav { display: flex; justify-content: center; gap: 20px; }
-    header nav a { font-weight: bold; color: white; }
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Poppins',sans-serif;background:#f5f7fa;color:#333}
 
-    /* Hero */
-    .hero {
-      background: #e9f7ef;
-      text-align: center;
-      padding: 60px 20px;
-    }
-    .hero h1 { font-size: 2.8rem; margin-bottom: 20px; }
-    .hero .cta { background: #28a745; color: white; padding: 12px 28px; border-radius: 6px; font-size: 1rem; }
+/* HEADER */
+.Header-wrapper{
+    background:#0f172a;
+    padding:18px 0;
+    color:white;
+}
+.Header-container{
+    width:90%;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+.Header-logo{
+    font-size:22px;
+    font-weight:700;
+}
+.Header-navbar ul{
+    display:flex;
+    list-style:none;
+    gap:25px;
+}
+.Header-navbar a{
+    color:white;
+    text-decoration:none;
+    font-weight:500;
+}
+.Header-navbar a:hover{
+    color:#22c55e;
+}
 
-    /* Fitur grid */
-    .features {
-      display: grid;
-      gap: 40px;
-      padding: 40px 0;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    }
-    .feature {
-      background: #f9f9f9;
-      padding: 25px;
-      border-radius: 8px;
-      border: 1px solid #ddd;
-    }
-    .feature h3 { margin-bottom: 10px; color: #28a745; }
-    .feature p { font-size: 0.95rem; }
+/* HERO */
+.hero{
+    text-align:center;
+    padding:80px 20px;
+    background:linear-gradient(135deg,#22c55e,#16a34a);
+    color:white;
+}
+.hero h1{
+    font-size:42px;
+    margin-bottom:20px;
+}
+.hero p{
+    font-size:18px;
+    margin-bottom:25px;
+}
+.hero button{
+    padding:12px 30px;
+    border:none;
+    border-radius:6px;
+    background:white;
+    color:#16a34a;
+    font-weight:600;
+    cursor:pointer;
+}
+.hero button:hover{
+    opacity:0.9;
+}
 
-    /* Footer */
-    footer {
-      background: #343a40;
-      color: #eee;
-      text-align: center;
-      padding: 14px 0;
-      font-size: 0.9rem;
-    }
+/* DONASI SECTION */
+.donasi-section{
+    padding:80px 20px;
+    text-align:center;
+}
+.donasi-section h2{
+    font-size:36px;
+    margin-bottom:50px;
+}
 
-    /* Responsive tweaks */
-    @media (max-width: 600px) {
-      .hero h1 { font-size: 2.2rem; }
-      header nav { flex-direction: column; gap: 10px; }
-    }
-  </style>
+.pricing-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+    width:90%;
+    margin:auto;
+}
+
+.card{
+    background:white;
+    padding:40px 25px;
+    border-radius:12px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.08);
+    transition:0.3s;
+}
+.card:hover{
+    transform:translateY(-5px);
+}
+
+.card h3{
+    font-size:20px;
+    margin-bottom:10px;
+}
+
+.price{
+    font-size:32px;
+    font-weight:700;
+    margin:20px 0;
+}
+
+.card button{
+    padding:10px 25px;
+    border:none;
+    border-radius:6px;
+    background:#16a34a;
+    color:white;
+    cursor:pointer;
+    margin-top:15px;
+}
+
+.card ul{
+    list-style:none;
+    margin-top:20px;
+    text-align:left;
+}
+.card ul li{
+    margin-bottom:8px;
+    font-size:14px;
+}
+
+/* warna variasi */
+.card.gray{background:#eef2f7}
+.card.green{background:#e6f7ee}
+.card.blue{background:#e8f3ff}
+.card.orange{background:#fff1e6}
+
+/* FOOTER */
+.footer{
+    background:#0f172a;
+    color:white;
+    text-align:center;
+    padding:30px 10px;
+    margin-top:60px;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+    .hero h1{font-size:30px}
+}
+</style>
 </head>
+
 <body>
 
-  <!-- Header -->
-  <header>
-    <div class="container">
-      <nav>
-        <a href="#hero">Home</a>
-        <a href="#features">Fitur</a>
-        <a href="#contact">Kontak</a>
-      </nav>
+<!-- HEADER -->
+<div class="Header-wrapper">
+    <div class="Header-container">
+        <div class="Header-logo">IkhtiarSehat</div>
+        <div class="Header-navbar">
+            <ul>
+                <li><a href="#">Beranda</a></li>
+                <li><a href="#">Program</a></li>
+                <li><a href="#">HealthyEng</a></li>
+                <li><a href="#">Kontak</a></li>
+            </ul>
+        </div>
     </div>
-  </header>
+</div>
 
-  <!-- Hero Section -->
-  <section id="hero" class="hero container">
-    <h1>Selamat Datang di IkhtiarSehat</h1>
-    <p>Platform Aplikasi untuk Hidup Lebih Sehat dan Aktif 📱🌿</p>
-    <a href="#features" class="cta">Lihat Fitur</a>
-  </section>
+<!-- HERO -->
+<section class="hero">
+    <h1>Ikhtiar Sehat Bersama</h1>
+    <p>Platform Edukasi, Teknologi, dan Komunitas untuk Sehat Holistik</p>
+    <button onclick="document.getElementById('donasi').scrollIntoView({behavior:'smooth'})">
+        Open Donasi
+    </button>
+</section>
 
-  <!-- Features Section -->
-  <section id="features" class="container">
-    <h2 style="text-align:center; color:#28a745; margin-bottom:30px;">Fitur Unggulan</h2>
-    <div class="features">
+<!-- DONASI -->
+<section class="donasi-section" id="donasi">
+    <h2>Open Donasi</h2>
 
-      <!-- Fitur 1 -->
-      <div class="feature">
-        <h3>Jadwal Kegiatan Sehat</h3>
-        <p>Lihat dan kelola jadwal aktivitas sehat Anda harian.</p>
-      </div>
+    <div class="pricing-grid">
 
-      <!-- Fitur 2 -->
-      <div class="feature">
-        <h3>Rekomendasi Nutrisi</h3>
-        <p>Dapatkan saran nutrisi berdasarkan kebutuhan tubuh.</p>
-      </div>
+        <div class="card gray">
+            <h3>Sahabat Sehat</h3>
+            <div class="price">Rp 0</div>
+            <p>Doa & Support Moral</p>
+            <button>Gabung</button>
+            <ul>
+                <li>✔ Akses konten edukasi</li>
+                <li>✔ Grup komunitas</li>
+                <li>✖ Support prioritas</li>
+            </ul>
+        </div>
 
-      <!-- Fitur 3 -->
-      <div class="feature">
-        <h3>Tracker Kebiasaan</h3>
-        <p>Catat kebiasaan sehat, pantau kemajuan Anda setiap hari.</p>
-      </div>
+        <div class="card green">
+            <h3>Supporter</h3>
+            <div class="price">Rp 25.000</div>
+            <p>Kontribusi Dasar</p>
+            <button>Donasi</button>
+            <ul>
+                <li>✔ Semua fitur Sahabat</li>
+                <li>✔ Akses webinar</li>
+                <li>✖ Konsultasi khusus</li>
+            </ul>
+        </div>
 
-      <!-- Fitur 4 -->
-      <div class="feature">
-        <h3>Notifikasi & Pengingat</h3>
-        <p>Menerima pengingat harian untuk aktivitas dan asupan.</p>
-      </div>
+        <div class="card blue">
+            <h3>Pejuang Sehat</h3>
+            <div class="price">Rp 50.000</div>
+            <p>Dukungan Berkala</p>
+            <button>Donasi</button>
+            <ul>
+                <li>✔ Semua fitur sebelumnya</li>
+                <li>✔ Materi eksklusif</li>
+                <li>✔ Support prioritas</li>
+            </ul>
+        </div>
+
+        <div class="card orange">
+            <h3>Founder Circle</h3>
+            <div class="price">Rp 100.000</div>
+            <p>Dukungan Maksimal</p>
+            <button>Donasi</button>
+            <ul>
+                <li>✔ Semua fitur lengkap</li>
+                <li>✔ Akses roadmap HealthyEng</li>
+                <li>✔ Konsultasi terbatas</li>
+            </ul>
+        </div>
 
     </div>
-  </section>
+</section>
 
-  <!-- Footer -->
-  <footer id="contact">
-    <p>© 2026 IkhtiarSehat - App Platform HealthyEng</p>
-    <p>Email: info@ikhtiarsehat.app</p>
-  </footer>
+<!-- FOOTER -->
+<div class="footer">
+    © 2026 IkhtiarSehat | App Platform HealthyEng  
+    <br>
+    Bersama: Doa • Usaha • Ikhtiar • Tawakkal
+</div>
 
 </body>
 </html>
